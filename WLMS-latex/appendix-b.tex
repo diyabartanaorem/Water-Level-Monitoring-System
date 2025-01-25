@@ -1,0 +1,150 @@
+\section*{APPENDIX B : Calibration and Setup Guide}
+\vspace*{0.6cm}
+{\fontsize{12}{14}\selectfont{
+
+    \begin{enumerate}
+    \item \textbf{Hardware Setup:}
+    \begin{itemize}
+        \item \textbf{Components Required:}
+        \begin{itemize}
+            \item ESP8266 (e.g., NodeMCU)
+            \item Ultrasonic sensor (HC-SR04)
+            \item OLED display (SH1106)
+            \item Buzzer
+            \item Jumper wires
+            \item Power supply (USB or battery)
+            \item Water tank for testing
+        \end{itemize}
+        \item \textbf{Connections:}
+        \begin{itemize}
+            \item \textbf{Ultrasonic Sensor (HC-SR04):}
+            \begin{itemize}
+                \item Trig pin $\rightarrow$ GPIO14 (D5)
+                \item Echo pin $\rightarrow$ GPIO12 (D6)
+                \item VCC $\rightarrow$ 5V
+                \item GND $\rightarrow$ GND
+            \end{itemize}
+            \item \textbf{OLED Display (SH1106):}
+            \begin{itemize}
+                \item SDA $\rightarrow$ D2 (I2C Data)
+                \item SCL $\rightarrow$ D1 (I2C Clock)
+                \item VCC $\rightarrow$ 3.3V
+                \item GND $\rightarrow$ GND
+            \end{itemize}
+            \item \textbf{Buzzer:}
+            \begin{itemize}
+                \item Positive terminal $\rightarrow$ GPIO2 (D4)
+                \item Negative terminal $\rightarrow$ GND
+            \end{itemize}
+        \end{itemize}
+        \item \textbf{Powering the Circuit:}
+        \begin{itemize}
+            \item Ensure the ESP8266 is powered via USB or a 3.3V battery source.
+            \item Verify all connections before powering on.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Software Configuration:}
+    \begin{itemize}
+        \item Install Arduino IDE:
+        \begin{itemize}
+            \item Download and install the Arduino IDE from \url{https://www.arduino.cc/}.
+        \end{itemize}
+        \item Install Necessary Libraries:
+        \begin{enumerate}
+            \item Open the Arduino IDE.
+            \item Navigate to \textbf{Sketch > Include Library > Manage Libraries}.
+            \item Search for and install:
+            \begin{itemize}
+                \item \texttt{Blynk}
+                \item \texttt{Adafruit GFX Library}
+                \item \texttt{Adafruit SH110X}
+            \end{itemize}
+        \end{enumerate}
+        \item Set Up Blynk:
+        \begin{enumerate}
+            \item Create a new project in the Blynk app.
+            \item Select the device as \textbf{ESP8266} and connection type as \textbf{WiFi}.
+            \item Note the Auth Token provided and replace it in the code.
+        \end{enumerate}
+        \item Configure WiFi Credentials:
+        \begin{itemize}
+            \item Replace the placeholders for SSID and password in the code:
+            \begin{verbatim}
+            char ssid[] = "YourWiFiName";
+            char pass[] = "YourWiFiPassword";
+            \end{verbatim}
+        \end{itemize}
+        \item Upload the Code:
+        \begin{enumerate}
+            \item Select the board as \textbf{NodeMCU 1.0} in \textbf{Tools > Board}.
+            \item Select the correct COM port.
+            \item Click on the upload button to flash the code onto the ESP8266.
+        \end{enumerate}
+    \end{itemize}
+    
+    \item \textbf{Calibration:}
+    \begin{itemize}
+        \item Tank Height:
+        \begin{itemize}
+            \item Measure the height of the water tank in centimeters.
+            \item Replace the value of \texttt{tankHeight} in the code with the measured height.
+        \end{itemize}
+        \item Testing the Ultrasonic Sensor:
+        \begin{itemize}
+            \item Position the sensor at the top of the water tank.
+            \item Measure the distance manually using a ruler and compare it with the sensor's output.
+            \item Adjust placement for accurate readings.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Testing and Validation:}
+    \begin{itemize}
+        \item OLED Display:
+        \begin{itemize}
+            \item Ensure the display shows the water level in percentage.
+            \item Adjust the screen connections if it remains blank.
+        \end{itemize}
+        \item Buzzer:
+        \begin{itemize}
+            \item Test the buzzer functionality by lowering the water level to trigger the threshold (\texttt{distance <= 5 cm}).
+            \item Enable/disable the buzzer via the Blynk app by toggling Virtual Pin V5.
+        \end{itemize}
+        \item Blynk Dashboard:
+        \begin{itemize}
+            \item Add widgets in the Blynk app:
+            \begin{itemize}
+                \item Label for Virtual Pin V1 (Water Level Percentage).
+                \item Label for Virtual Pin V2 (Distance in cm).
+                \item Button for Virtual Pin V5 (Buzzer control).
+            \end{itemize}
+            \item Validate data updates in real-time.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Troubleshooting:}
+    \begin{itemize}
+        \item No Display on OLED:
+        \begin{itemize}
+            \item Verify the I2C address (\texttt{0x3c}) and connections.
+            \item Ensure the \texttt{Adafruit\_SH1106} library is properly installed.
+        \end{itemize}
+        \item Buzzer Not Working:
+        \begin{itemize}
+            \item Check GPIO2 (\texttt{D4}) connections.
+            \item Ensure \texttt{buzzerEnabled} is set to \texttt{true}.
+        \end{itemize}
+        \item Blynk Not Connecting:
+        \begin{itemize}
+            \item Confirm WiFi credentials and internet connectivity.
+            \item Check the Auth Token in the code.
+        \end{itemize}
+        \item Ultrasonic Sensor Issues:
+        \begin{itemize}
+            \item Test the sensor separately using a simple distance measurement script.
+            \item Ensure clean and unobstructed sensor placement.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+} 

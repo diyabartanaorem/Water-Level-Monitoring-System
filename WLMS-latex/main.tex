@@ -1,0 +1,236 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage[normalem]{ulem}
+\geometry{verbose,a4paper,tmargin=1in,bmargin=1in,lmargin=1.5in,rmargin=1in}
+\usepackage{graphicx}
+\usepackage{setspace}
+\setstretch{1.8}
+\usepackage{seqsplit}
+\usepackage{ltxtable}
+\usepackage{array,longtable}
+\usepackage{hyphenat}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage{varwidth}
+\usepackage{subfig}
+\usepackage{nicefrac}
+\usepackage{fixltx2e}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{cellspace}
+\usepackage{morefloats}
+\usepackage{amssymb}
+\usepackage{cite}
+\DeclareGraphicsExtensions{.eps}
+\usepackage{nomencl}
+\usepackage{import}
+\makenomenclature
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\onehalfspacing
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref} % for hyperlinks in the document
+\usepackage{listings}
+\usepackage{color}
+\definecolor{gb}{rgb}{0,0.5,0.5}
+\definecolor{red}{rgb}{0.5,0,0}
+\lstset{
+    keywordstyle=\small\bf\color{blue},
+    commentstyle=\small\color{gb},
+    stringstyle=\small\color{red},
+}
+
+% Customizing Chapter and Section Title Formats
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{Chapter \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{indentfirst}
+\usepackage{enumitem}
+
+\usepackage{multicol} % Package for multiple columns
+\usepackage{courier} % Use Courier font for code
+\usepackage{fontenc} % Load this package if needed for specific font encodings
+\usepackage{xcolor} % For coloring
+\usepackage{tcolorbox} % For the terminal box
+\tcbuselibrary{listingsutf8, skins} % Load the necessary tcolorbox libraries
+
+\setlength{\parindent}{0pt}
+\definecolor{myblue}{RGB}{0,0,128}
+
+
+% Code style
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+% Define the terminal shell block style
+\tcbset{
+  terminal shell/.style={
+    enhanced,
+    colback=black!95!white,
+    colframe=black!80!white,
+    colupper=green!90!black, % Text color similar to shell
+    boxrule=0.5mm,
+    top=2mm,
+    bottom=2mm,
+    left=2mm,
+    right=2mm,
+    attach boxed title to top center={yshift=-2mm},
+    boxed title style={
+      colframe=black!80!white,
+      colback=gray!20!black,
+      sharp corners,
+      top=1mm,
+      bottom=1mm,
+      left=2mm,
+      right=2mm,
+    },
+    listing only,
+    listing options={language=bash, breaklines=true, basicstyle=\ttfamily\color{green!90!black}, keywordstyle=\color{cyan}}
+  }
+}
+
+\usepackage{fontawesome}
+\usepackage{pifont}
+
+
+
+
+
+
+
+\makeatletter
+%\renewcommand\bibname{References}
+\makeatother
+
+\begin{document}
+
+% TITLE PAGE
+\begin{titlepage}
+    \input{title-page.tex}
+\end{titlepage}
+
+\clearpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+% Set Roman page numbering
+\pagenumbering{roman}
+
+\newpage
+% DEDICATION
+\input{dedication.tex}
+
+\newpage
+% BONAFIDE CERTIFICATE
+\input{bonafide-certificate.tex}
+\addcontentsline{toc}{chapter}{BONAFIDE CERTIFICATE}
+
+\newpage
+% DECLARATION
+\input{decleration-diya.tex}
+\addcontentsline{toc}{chapter}{DECLARATION}
+
+\newpage
+\input{decleration-rick.tex}
+
+
+\newpage
+\input{decleration-lann.tex}
+
+
+\newpage
+% ACKNOWLEDGEMENT
+\input{acknowledgement.tex}
+\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENT}
+
+\newpage
+% ABSTRACT
+\input{abstract.tex}
+\addcontentsline{toc}{chapter}{ABSTRACT}
+
+\newpage
+% TABLE OF CONTENTS
+\tableofcontents
+\newpage
+% LIST OF FIGURES
+\listoffigures
+
+\newpage
+% Switch to Arabic page numbering
+\pagenumbering{arabic}
+
+% Chapter 1 Example
+\chapter{INTRODUCTION}
+\input{introduction.tex}
+
+\chapter{LITERATURE REVIEW}
+\input{literature.tex}
+
+\chapter{PROPOSED SYSTEM}
+\input{proposed-system.tex}
+
+
+\chapter{SYSTEM IMPLEMENTATION}
+\input{system-implementation.tex}
+
+\chapter{CONCLUSION}
+\input{conclusion.tex}
+
+
+\chapter*{REFERENCES}
+\addcontentsline{toc}{chapter}{REFERENCES}
+\input{reference.tex}
+
+
+
+\chapter*{APPENDICES}
+\addcontentsline{toc}{chapter}{APPENDICES}
+\input{appendix-a.tex}
+\newpage
+\input{appendix-b.tex}
+
+
+\end{document}

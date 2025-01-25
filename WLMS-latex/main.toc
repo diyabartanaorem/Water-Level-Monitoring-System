@@ -1,0 +1,30 @@
+\contentsline {chapter}{BONAFIDE CERTIFICATE}{ii}{Doc-Start}%
+\contentsline {chapter}{DECLARATION}{iii}{Doc-Start}%
+\contentsline {chapter}{ACKNOWLEDGEMENT}{vi}{Doc-Start}%
+\contentsline {chapter}{ABSTRACT}{vii}{Doc-Start}%
+\contentsline {chapter}{List of Figures}{x}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectives of the study}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}LITERATURE REVIEW}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Overview of Water Level Monitoring Systems}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Traditional Water Level Monitoring Methods}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Modern Water Level Monitoring Systems}{5}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Key Components of a Modern Water Level Monitoring System}{6}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Applications of Water Level Monitoring Systems}{6}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Challenges and Future Trends}{7}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Existing Technologies and Methods}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}PROPOSED SYSTEM}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}System Design Overview}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Hardware Components Used}{11}{section.3.2}%
+\contentsline {chapter}{\numberline {4}SYSTEM IMPLEMENTATION}{16}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Hardware Assembly and Circuit Diagram}{16}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Software Development and Integration with Arduino IDE and Blynk}{18}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Arduino IDE Setup and Programming}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Blynk Cloud Integration}{20}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}CONCLUSION}{22}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of the Project}{22}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Recommendation for Future Research}{22}{section.5.2}%
+\contentsline {chapter}{REFERENCES}{25}{chapter*.14}%
+\contentsline {chapter}{APPENDICES}{26}{chapter*.15}%
